@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Paytone+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    flex-direction: column;
+    background-color: #155263;
+    position: relative;
+}
+
+nav {
+    width: 100vw;
+    height: 155px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    background-color: #ff6f3c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30vw;
+    height: 80px;
+    list-style-type: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 48px;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 50px;
+    box-shadow: 0px 0px 11px #0c2d36;
+}
+
+.container {
+    /* background-color: rgb(121, 121, 121); */
+    width: 100vw;
+    height: 459px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.player-1 {
+    background-color: #ff6f3c;
+    width: 200px;
+    height: 200px;
+    margin-left: 141px;
+    border-radius: 0px 30px 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 11px #0c2d36;
+    /* animation-name: playerAnimation; */
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes playerAnimation {
+    0% {
+        background-color: #ff6f3c;
+    }
+
+    50% {
+        background-color: rgb(255, 189, 134);
+    }
+}
+
+.player-2 {
+    background-color: #ff6f3c;
+    width: 200px;
+    height: 200px;
+    margin-right: 141px;
+    border-radius: 30px 0px 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 11px #0c2d36;
+    /* animation-name: playerAnimation; */
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+.game-container {
+    background-color: #0f3b47;
+    height: 450px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.box-container {
+    display: grid;
+    grid-template-rows: repeat(3, 120px);
+    grid-template-columns: repeat(3, 120px);
+    gap: 20px;
+}
+
+.box-container button {
+    background-color: black;
+    border-radius: 25px;
+    border: none;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ff00d7;
+    font-size: 86px;
+    box-shadow: -2px -3px 8px #1ab0d8, 5px 6px 10px #092228;
+    transition: all 0.4s ease-in-out;
+}
+
+.box-container button:hover {
+    background-color: white;
+}
+
+.player-txt h3 {
+    font-size: 25PX;
+    line-height: 1.3;
+}
+
+.player-txt h1 {
+    font-size: 85px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.new-game-container {
+    display: flex;
+    justify-content: center;
+}
+
+.new-game {
+    background-color: #ff6f3c;
+    font-size: 20px;
+    justify-content: center;
+    padding: 8px 19px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 3px 6px 14px #0c2d36;
+    transition: all 0.2s ease-in-out;
+}
+
+.new-game:hover {
+    background-color: black;
+    color: yellow;
+}
+
+.WinnerAnnounce {
+    background-color: #111111c9;
+    color: white;
+    width: 50vw;
+    height: 400px;
+    position: absolute;
+    text-align: center;
+    right: 390px;
+    top: 188px;
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+
+.WinnerAnnounce>h1:nth-child(1) {
+    font-size: 64px;
+    color: red;
+    background: white;
+    padding-bottom: 7px;
+    animation-name: blink;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes blink {
+    0% {
+        color: red
+    }
+
+    50% {
+        color: yellow;
+    }
+
+    70% {
+        color: green;
+    }
+
+    100% {
+        /* color: #1ab0d8; */
+    }
+}
+
+.sms {
+    margin-top: 93px;
+    text-align: center;
+    color: red;
+    animation-name: blink1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes blink1 {
+    0% {
+        color: red
+    }
+
+    50% {
+        color: yellow;
+    }
+}
+
+button.new-game:nth-child(3) {
+    margin-top: 39px;
+}
+
+button.new-game:nth-child(3):hover {
+    background-color: white;
+    color: red;
+}
+
+.hide {
+    transition: all 0.10s ease-in;
+    display: none;
+}
+
+button.new-game:nth-child(2) {
+    margin-left: 24px;
+}
+
+.pf {
+    font-size: 36px;
+}
